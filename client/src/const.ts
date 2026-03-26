@@ -11,7 +11,7 @@ export const getLoginUrl = () => {
     return window.location.origin;
   }
 
-  const url = new URL("/app-auth", oauthPortalUrl);
+  const url = new URL(oauthPortalUrl + "/app-auth");
 
   if (appId) {
     url.searchParams.set("appId", appId);
